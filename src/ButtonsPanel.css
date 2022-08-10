@@ -1,0 +1,17 @@
+.buttons-panel {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+button {
+    margin: 5px;
+    color: white;
+    background-color: blue;
+    border: 0;
+    padding: 10px;
+}
+
+button:hover {
+    background-color: lightblue;
+    cursor: pointer;
+}

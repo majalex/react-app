@@ -1,0 +1,13 @@
+.counter {
+    border: 1px solid black;
+    margin-top: 20px;
+    width: 70%;
+}
+
+.counter-box {
+ margin-top: 20px;
+}
+
+.counter-element {
+    font-weight: bold;
+}
