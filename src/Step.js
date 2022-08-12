@@ -1,11 +1,11 @@
 import React from "react";
 import './Step.css';
 
-function Step() {
+function Step(props) {
     return (
         <div className="Step">
-            <span>Krok:
-                <input type="number" /> 
+            <span>Step:
+                <input onChange={props.stepMethod} type="number" /> 
             </span>
         </div>
     );

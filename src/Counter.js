@@ -12,12 +12,18 @@ class Counter extends Component {
     super(props);
 
     this.state = {
-      counterValue: this.props.initValue
+      counterValue: this.props.initValue,
+      stepValue: 1
     };
   }
 
-  changeValue = (action) => {
+  changeStepValue = (event) => {
+    this.setState({
+      stepValue: event.target.value
+    })
+  }
 
+  changeValue = (action) => {
     this.setState((prevState, prevProps) => {
 
       let currentCounterValue = prevState.counterValue;
@@ -26,8 +32,11 @@ class Counter extends Component {
         currentCounterValue += 1;
       } else if (action === 'reinit') {
         currentCounterValue = prevProps.initValue;
-      } else {
+      } else if (action === 'reset') {
         currentCounterValue = 0;
+      }
+      else {
+        currentCounterValue += +this.state.stepValue;
       }
 
       return ({
@@ -44,8 +53,8 @@ class Counter extends Component {
           <span className="counter-element">Counter:</span>
           <Display displayValue={this.state.counterValue} />
         </div>
-        <ButtonsPanel buttonMethod={this.changeValue} />
-        <Step />
+        <ButtonsPanel buttonMethod={this.changeValue} stepValue={this.state.stepValue} />
+        <Step stepMethod={this.changeStepValue} />
       </div>
     );
   }
