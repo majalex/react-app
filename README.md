@@ -1,3 +1,19 @@
+# Counter App
+
+This is a counter that has an option of incrementing with chosen step value.
+
+
+
+
+
+
+## App screenshot
+
+
+
+![Zrzut ekranu 2022-09-6 o 17 46 15](https://user-images.githubusercontent.com/105987428/188680488-68b385c9-643e-4534-a031-d1e3d185b6ed.png)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
